@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+*.pyc
+node_modules/
+frontend/dist/
+models/
+temp_pdfs/
+.env
+Thumbs.db
+.DS_Store

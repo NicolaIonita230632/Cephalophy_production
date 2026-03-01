@@ -1,0 +1,348 @@
+body {
+  margin: 0
+}
+
+/* Analysis Tabs Styling */
+.analysis-tabs .ant-tabs-nav {
+  margin-bottom: 24px;
+  background: rgba(255, 255, 240, 0.1);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.analysis-tabs .ant-tabs-tab {
+  color: #FFFFF0 !important;
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.analysis-tabs .ant-tabs-tab-active {
+  background: #FFFFF0 !important;
+  border-radius: 6px;
+}
+
+.analysis-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #09185B !important;
+}
+
+.analysis-tabs .ant-tabs-tab:hover {
+  color: #FFFFF0;
+  background: rgba(255, 255, 240, 0.05);
+  border-radius: 6px;
+}
+
+.analysis-tabs .ant-tabs-tab-disabled {
+  opacity: 0.4;
+}
+
+.analysis-tabs .ant-tabs-ink-bar {
+  display: none;
+}
+
+.analysis-tabs .ant-tabs-content {
+  color: #FFFFF0;
+}
+
+/* Select Dropdown Fix */
+.ant-select-dropdown {
+  background-color: #FFFFFF !important;
+}
+
+.ant-select-dropdown .ant-select-item {
+  color: #000000 !important;
+}
+
+.ant-select-dropdown .ant-select-item-option-selected {
+  background-color: #e6f7ff !important;
+}
+
+.ant-select-dropdown .ant-select-item-option-active {
+  background-color: #f5f5f5 !important;
+}
+
+/* IMPROVED: Select Input Display - White background with black text for better contrast */
+.ant-select-selector {
+  background-color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 240, 0.5) !important;
+}
+
+.ant-select-selection-item {
+  color: #000000 !important;
+}
+
+.ant-select-arrow {
+  color: #000000 !important;
+}
+
+/* Ensure analysis page selects have white background with black text */
+.analysis-tabs .ant-select-selector {
+  background-color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 240, 0.5) !important;
+}
+
+.analysis-tabs .ant-select-selection-item {
+  color: #000000 !important;
+}
+
+.analysis-tabs .ant-select-arrow {
+  color: #000000 !important;
+}
+
+/* Custom Select Class for Analysis Type */
+.custom-select .ant-select-selector {
+  background-color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 240, 0.5) !important;
+  color: #000000 !important;
+}
+
+.custom-select .ant-select-selection-item {
+  color: #000000 !important;
+}
+
+.custom-select .ant-select-arrow {
+  color: #000000 !important;
+}
+
+/* Input Number Styling */
+.ant-input-number {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+.ant-input-number-input {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+/* Modal Styling */
+.ant-modal-content {
+  background-color: #FFFFFF !important;
+}
+
+.ant-modal-header {
+  background-color: #FFFFFF !important;
+}
+
+.ant-modal-title {
+  color: #000000 !important;
+}
+
+.ant-modal-body {
+  color: #000000 !important;
+}
+
+/* Modal Footer Buttons */
+.ant-modal-footer .ant-btn-default {
+  color: #000000 !important;
+  background-color: #f0f0f0 !important;
+  border-color: #d9d9d9 !important;
+}
+
+.ant-modal-footer .ant-btn-primary {
+  background-color: #09185B !important;
+  color: #FFFFF0 !important;
+  border: none !important;
+}
+
+/* IMPROVED: Table Styling - White with light gray rows */
+.ant-table {
+  background: #FFFFFF !important;
+}
+
+.ant-table-thead > tr > th {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border-bottom: 2px solid #d9d9d9 !important;
+  font-weight: bold !important;
+}
+
+.ant-table-tbody > tr > td {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #f5f5f5 !important;
+}
+
+.ant-table-tbody > tr.ant-table-row-selected > td {
+  background: #e6f7ff !important;
+}
+
+/* Checkbox Styling in Modal */
+.ant-checkbox-wrapper {
+  color: #000000 !important;
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner {
+  border-color: #09185B !important;
+}
+
+/* Checkbox on canvas overlay - always white background with blue checkmark */
+.ant-checkbox-inner {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #09185B !important;
+  border-width: 2px !important;
+}
+
+/* Checkbox in side panels (dark background) - white box with blue check */
+.ant-checkbox:not(.ant-checkbox-checked) .ant-checkbox-inner {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Dropdown menu styling */
+.ant-dropdown-menu {
+  background-color: #FFFFFF !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.ant-dropdown-menu-item {
+  color: #000000 !important;
+  padding: 8px 16px !important;
+}
+
+.ant-dropdown-menu-item:hover {
+  background-color: #f5f5f5 !important;
+}
+
+.ant-dropdown-menu-item-disabled {
+  color: #d9d9d9 !important;
+}
+
+.ant-dropdown-menu-item-icon {
+  color: #09185B !important;
+}
+
+/* Button Styling */
+.depth-button {
+  background: linear-gradient(135deg, #09185B 0%, #0d2270 100%) !important;
+  color: #FFFFF0 !important;
+  border: none !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.depth-button:hover {
+  background: linear-gradient(135deg, #0d2270 0%, #09185B 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: #FFFFF0 !important;
+}
+
+.depth-button-secondary {
+  background: rgba(255, 255, 240, 0.1) !important;
+  color: #FFFFF0 !important;
+  border: 1px solid rgba(255, 255, 240, 0.3) !important;
+  transition: all 0.3s ease;
+}
+
+.depth-button-secondary:hover {
+  background: rgba(255, 255, 240, 0.2) !important;
+  border: 1px solid rgba(255, 255, 240, 0.5) !important;
+  color: #FFFFF0 !important;
+}
+
+/* AutoComplete Styling */
+.ant-select-auto-complete .ant-select-selector {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1px solid #d9d9d9 !important;
+}
+
+.ant-select-auto-complete .ant-select-selection-search-input {
+  color: #000000 !important;
+}
+
+/* Continue Button Styling Override */
+.ant-btn-primary {
+  background-color: #FFFFF0 !important;
+  color: #000000 !important;
+  border: none !important;
+  font-weight: bold !important;
+}
+
+.ant-btn-primary:hover {
+  background-color: #e6e6d0 !important;
+  color: #000000 !important;
+}
+
+.notes-bubble {
+  position: relative;
+  margin-top: 0px;
+  padding: 12px;
+  background: rgb(67 74 110 / 75%);
+  border: 2px solid rgba(255, 255, 240, 0.2);
+  border-radius: 8px;
+  color: #FFFFF0;
+  font-size: 14px;
+  max-height: 150px;
+  max-width: 300px;
+}
+
+.notes-arrow-border {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(255, 255, 240, 0.2);
+}
+
+.notes-arrow {
+  position: absolute;
+  top: -8px;
+  left: 21px;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid rgb(67 74 110 / 75%)
+}
+
+.selected-row {
+  background-color: #e6f7ff !important;
+}
+
+.selected-row:hover {
+  background-color: #e6f7ff !important;
+}
+
+.default-row:hover {
+  background-color: #f5f5f5 !important;
+}
+
+/* Override Ant Design's default row hover */
+.ant-table-tbody > tr.selected-row > td {
+  background-color: #a3e2ff !important;
+}
+
+.ant-table-tbody > tr.default-row:hover > td {
+  background-color: #f5f5f5 !important;
+}
+
+.notesFields {
+  background: rgba(0, 0, 0, 0.1);
+  color: #FFFFF0;
+  border: 2px solid rgba(255, 255, 240, 0.1);
+  width: 100%;
+  max-width: 100%;
+  height: 20px;
+}
+
+.ant-modal-body h4 {
+  color: #FFFFF0;
+}

@@ -12,7 +12,7 @@ import {
   FilePdfOutlined,
   DownloadOutlined
 } from '@ant-design/icons';
-import UWCLogo from "@/assets/UWCLogo.png";
+
 
 const { Option } = Select;
 
@@ -198,14 +198,6 @@ const ReportPreview: React.FC = () => {
         message.warning("No measurements available for PDF");
         return;
       }
-
-      // Compress logo (smaller, slightly higher quality)
-      const logoBase64 = await blobUrlToCompressedBase64(
-        UWCLogo,
-        300,
-        300,
-        0.8
-      );
 
       // Compress page images
       const page1Base64 = await Promise.all(

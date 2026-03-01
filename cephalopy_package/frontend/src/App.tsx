@@ -19,7 +19,6 @@ import AnalysisPage from '@/pages/AnalysisPage';
 import ModelRetrainingPage from '@/pages/ModelRetrainingPage';
 import ModelDetailPage from '@/pages/ModelDetailPage';
 import ModelComparisonPage from '@/pages/ModelComparisonPage';
-import UWCLogoShield from "@/assets/UWCLogoshield.png";
 
 import './App.css';
 
@@ -62,24 +61,6 @@ function AppContent() {
             alignItems: 'center',
             marginRight: '40px'
           }}>
-            <div style={{
-              width: '50px',
-              height: '50px',
-              background: '#FFFFF0',
-              borderRadius: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontWeight: 'bold',
-              color: '#09185B',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
-            }}>
-              <img
-                src={UWCLogoShield}
-                alt="UWC"
-                style={{ width: '80%', height: '80%', objectFit: 'contain' }}
-              />
-            </div>
           </Link>
 
           <Menu

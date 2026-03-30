@@ -386,9 +386,9 @@ const AboutPage = () => {
                 e.target.style.borderBottomColor = 'rgba(255, 255, 255, 0.2)';
               }}
             >
-              University of the Western Cape
+              
             </a>{' '}
-            and{' '}
+            {' '}
             <a
               href="https://www.buas.nl/en"
               target="_blank"

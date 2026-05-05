@@ -8,15 +8,6 @@ const AboutPage = () => {
     cursor: 'pointer',
   };
 
-  // Style for institution links
-  const institutionLinkStyle = {
-    color: 'rgba(255, 255, 255, 0.6)',
-    textDecoration: 'none',
-    borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
-    transition: 'all 0.3s ease',
-    cursor: 'pointer',
-  };
-
   return (
     <div style={{
       minHeight: '100vh',
@@ -45,7 +36,7 @@ const AboutPage = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="rgba(255,255,255,0.02)" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"rgba(255,255,255,0.02)\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
           opacity: 0.5,
         }} />
 
@@ -129,7 +120,7 @@ const AboutPage = () => {
               color: 'rgba(255, 255, 255, 0.8)',
               marginBottom: '24px',
             }}>
-              This platform is part of an ongoing research initiative aimed at improving automated dental and craniofacial landmark detection for South African populations.
+              This platform is part of an ongoing research initiative aimed at improving automated dental and craniofacial landmark detection across diverse patient populations.
             </p>
             <p style={{
               fontSize: '18px',
@@ -137,7 +128,7 @@ const AboutPage = () => {
               color: 'rgba(255, 255, 255, 0.6)',
               marginBottom: '0',
             }}>
-              Existing AI models in dentistry are predominantly trained on European and Asian datasets, which can lead to reduced accuracy when applied to African anatomical profiles.
+              Existing AI models in dentistry are predominantly trained on narrow datasets, which can lead to reduced accuracy when applied to underrepresented anatomical profiles.
             </p>
           </div>
         </div>
@@ -224,7 +215,7 @@ const AboutPage = () => {
               color: '#FFFFFF',
               marginBottom: '16px',
             }}>
-              African Innovation
+              Inclusive Innovation
             </h3>
             <p style={{
               fontSize: '16px',
@@ -232,7 +223,7 @@ const AboutPage = () => {
               color: 'rgba(255, 255, 255, 0.7)',
               marginBottom: '0',
             }}>
-              Contributing to AI innovation within the African healthcare space with fair, context-aware tools.
+              Contributing to AI innovation in healthcare with fair, context-aware tools built for diverse patient populations.
             </p>
           </div>
         </div>
@@ -253,7 +244,7 @@ const AboutPage = () => {
             marginBottom: '24px',
             maxWidth: '900px',
           }}>
-            Current tools often struggle with image variability, calibration inconsistencies, and population-specific anatomical differences. By building a dedicated dataset and evaluation pipeline, we aim to create a more robust and generalisable detection system that aligns with the clinical realities of South African dentistry.
+            Current tools often struggle with image variability, calibration inconsistencies, and population-specific anatomical differences. By building a dedicated dataset and evaluation pipeline, we aim to create a more robust and generalisable detection system that aligns with the clinical realities of modern dental practice.
           </p>
           <p style={{
             fontSize: '20px',
@@ -279,7 +270,7 @@ const AboutPage = () => {
             fontSize: '18px',
             lineHeight: '1.6',
             color: 'rgba(255, 255, 255, 0.9)',
-            marginBottom: '16px',
+            marginBottom: '0',
             fontWeight: '500',
           }}>
             Developed by{' '}
@@ -329,7 +320,7 @@ const AboutPage = () => {
                 e.target.style.borderBottomColor = 'rgba(255, 255, 255, 0.3)';
               }}
             >
-              Nicola Ioniţă
+              Nicola Ioniță
             </a>,{' '}
             <a
               href="https://www.linkedin.com/in/victor-oorthuis-3b12612a6/"
@@ -363,47 +354,6 @@ const AboutPage = () => {
               }}
             >
               Arnout Opfergelt
-            </a>
-          </p>
-          <p style={{
-            fontSize: '16px',
-            lineHeight: '1.6',
-            color: 'rgba(255, 255, 255, 0.6)',
-            marginBottom: '0',
-          }}>
-            In collaboration with the{' '}
-            <a
-              href="https://www.uwc.ac.za/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={institutionLinkStyle}
-              onMouseEnter={(e) => {
-                e.target.style.color = 'rgba(255, 255, 255, 0.8)';
-                e.target.style.borderBottomColor = 'rgba(255, 255, 255, 0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.color = 'rgba(255, 255, 255, 0.6)';
-                e.target.style.borderBottomColor = 'rgba(255, 255, 255, 0.2)';
-              }}
-            >
-              
-            </a>{' '}
-            {' '}
-            <a
-              href="https://www.buas.nl/en"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={institutionLinkStyle}
-              onMouseEnter={(e) => {
-                e.target.style.color = 'rgba(255, 255, 255, 0.8)';
-                e.target.style.borderBottomColor = 'rgba(255, 255, 255, 0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.color = 'rgba(255, 255, 255, 0.6)';
-                e.target.style.borderBottomColor = 'rgba(255, 255, 255, 0.2)';
-              }}
-            >
-              Breda University of Applied Sciences
             </a>
           </p>
         </div>

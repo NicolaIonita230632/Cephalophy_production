@@ -1,5 +1,6 @@
 __pycache__/
 .venv/
+venv/
 *.pyc
 node_modules/
 frontend/dist/

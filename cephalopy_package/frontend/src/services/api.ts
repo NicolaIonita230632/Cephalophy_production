@@ -3,9 +3,7 @@ import { QueryClient } from '@tanstack/react-query';
 
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ??
-  (import.meta.env.DEV
-    ? 'http://127.0.0.1:8000/api/v1'    // Only in dev mode
-    : 'https://ceph-backend-1022645602437.europe-west1.run.app/api/v1'); // Safe prod fallback
+  (import.meta.env.DEV ? 'http://127.0.0.1:8000/api/v1' : '');
 
 export const api = axios.create({
   baseURL: API_BASE_URL,

@@ -9,65 +9,14 @@ from datetime import datetime
 from typing import List
 
 from fastapi import APIRouter, HTTPException
-from google.cloud import storage
-from google.oauth2 import service_account
 from pydantic import BaseModel
+
+from api.core.gcs import get_storage_client
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
 
 BUCKET_NAME = "deepfuse-models-230632"
-
-
-def get_storage_client():
-    """Create a Google Cloud Storage client from environment credentials."""
-    # First try GOOGLE_APPLICATION_CREDENTIALS path
-    credentials_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
-
-    if credentials_path and os.path.exists(credentials_path):
-        logger.info(f"[models] Using credentials from: {credentials_path}")
-        credentials = service_account.Credentials.from_service_account_file(
-            credentials_path
-        )
-        return storage.Client(credentials=credentials, project=credentials.project_id)
-
-    # Fallback to individual environment variables
-    credentials_dict = {
-        "type": os.getenv("GCP_TYPE", "service_account"),
-        "project_id": os.getenv("GCP_PROJECT_ID"),
-        "private_key_id": os.getenv("GCP_PRIVATE_KEY_ID"),
-        "private_key": os.getenv("GCP_PRIVATE_KEY", "").replace("\\n", "\n"),
-        "client_email": os.getenv("GCP_CLIENT_EMAIL"),
-        "client_id": os.getenv("GCP_CLIENT_ID"),
-        "auth_uri": os.getenv(
-            "GCP_AUTH_URI", "https://accounts.google.com/o/oauth2/auth"
-        ),
-        "token_uri": os.getenv("GCP_TOKEN_URI", "https://oauth2.googleapis.com/token"),
-        "auth_provider_x509_cert_url": os.getenv(
-            "GCP_AUTH_PROVIDER_CERT_URL", "https://www.googleapis.com/oauth2/v1/certs"
-        ),
-        "client_x509_cert_url": os.getenv("GCP_CLIENT_CERT_URL"),
-    }
-
-    # Check if we have the minimum required fields
-    if (
-        credentials_dict["project_id"]
-        and credentials_dict["private_key"]
-        and credentials_dict["client_email"]
-    ):
-        logger.info("[models] Using credentials from environment variables")
-        credentials = service_account.Credentials.from_service_account_info(
-            credentials_dict
-        )
-        return storage.Client(
-            credentials=credentials, project=credentials_dict["project_id"]
-        )
-
-    # Last resort - try default credentials
-    logger.warning(
-        "[models] No credentials found in environment, trying default credentials"
-    )
-    return storage.Client()
 
 
 class ModelMetrics(BaseModel):
@@ -377,10 +326,6 @@ async def check_new_models():
     except Exception as e:
         logger.error(f"Failed to check new models: {e}")
         raise HTTPException(status_code=500, detail=str(e))
-
-    except Exception as e:
-        logger.error(f"Failed to initialize storage client: {e}")
-        raise
 
 
 # Helper functions for clinical comparison

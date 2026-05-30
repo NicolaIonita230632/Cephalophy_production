@@ -88,4 +88,6 @@ async def predict_from_file(
             model_version=model_version,
         )
 
-    except Exception as 
+    except Exception as e:
+        logger.error(f"Prediction failed: {e}")
+        raise HTTPException(status_code=500, detail=str(e))

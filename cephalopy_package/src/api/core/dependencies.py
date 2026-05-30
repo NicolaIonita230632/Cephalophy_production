@@ -43,12 +43,12 @@ DEFAULT_MODEL_BLOB = os.getenv(
     "models/production/best_model.pth",
 )
 
-# Where to cache the downloaded model locally
+# Where to cache the downloaded model locally (distinct from the local fallback path)
 GCS_MODEL_PATH = os.getenv(
-    "MODEL_LOCAL_PATH",
+    "GCS_MODEL_PATH",
     "models/deepfuse_model/best_model_from_gcs.pth",
 )
-# The model path used locally.
+# The model path used as a local fallback (no GCS credentials available)
 LOCAL_MODEL_PATH = os.getenv(
     "MODEL_LOCAL_PATH",
     "models/deepfuse_model/best_model.pth",
@@ -304,6 +304,4 @@ def get_current_model_info() -> Dict[str, Any]:
     return {
         "is_loaded": _is_loaded,
         "model_name": _current_model_name,
-        "active_model": _current_model_name,  # Added for compatibility
-        "device": _config.get("device"),
-    }
+        "active_model": _current_model_nam

@@ -11,7 +11,7 @@ import torch.nn.functional as F
 from fastapi import APIRouter, File, Form, HTTPException, UploadFile
 from PIL import Image
 
-from api.core.dependencies import get_config, get_model
+from api.core.dependencies import get_config, get_current_model_info, get_model
 from api.core.preprocessing import (
     heatmaps_to_landmarks,
     image_to_tensor,
@@ -79,13 +79,13 @@ async def predict_from_file(
         result = predict_landmarks(image, model, config)
         processing_time = time.time() - start_time
 
+        model_version = get_current_model_info().get("model_name") or "unknown"
+
         return PredictionOutput(
             ceph_id=ceph_id,
             landmarks=result["landmarks"],
             processing_time=processing_time,
-            model_version="1.0.0",
+            model_version=model_version,
         )
 
-    except Exception as e:
-        logger.error(f"Prediction failed: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    except Exception as 
